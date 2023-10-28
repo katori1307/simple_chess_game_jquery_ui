@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+    <style>
+        :root {
+            --light-color: #eeeed2;
+            --dark-color: #769656;
+            --square-size: 80px;
+            --piece-size: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 750px;
+        }
+
+        .chessboard {
+            display: grid;
+            grid-template-columns: repeat(8, var(--square-size));
+            grid-template-rows: repeat(8, var(--square-size));
+            border: 3px solid black;
+            position: relative;
+            width: fit-content;
+        }
+
+        .square {
+            width: var(--square-size);
+            height: var(--square-size);
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .piece {
+            width: var(--square-size);
+            height: var(--square-size);
+            position: absolute;
+            cursor: pointer;
+            font-size: var(--piece-size);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+
+        .thumb {
+            position: absolute;
+            opacity: 35%;
+        }
+
+        #pawn-1 {
+            top: calc(var(--piece-size) * 6);
+            left: calc(var(--piece-size) * 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="chessboard" id="chessboard">
+            <div class="piece pawn black" id="pawn-black-1">♟</div>
+            <div class="piece pawn black" id="pawn-black-2">♟</div>
+            <div class="piece pawn black" id="pawn-black-3">♟</div>
+            <div class="piece pawn black" id="pawn-black-4">♟</div>
+            <div class="piece pawn black" id="pawn-black-5">♟</div>
+            <div class="piece pawn black" id="pawn-black-6">♟</div>
+            <div class="piece pawn black" id="pawn-black-7">♟</div>
+            <div class="piece pawn black" id="pawn-black-8">♟</div>
+            <div class="piece special black" id="rook-1">♜</div>
+            <div class="piece special black" id="knight-1">♞</div>
+            <div class="piece special black" id="bishop-1">♝</div>
+            <div class="piece special black" id="queen">♛</div>
+            <div class="piece special black" id="king">♚</div>
+            <div class="piece special black" id="bishop-2">♝</div>
+            <div class="piece special black" id="knight-2">♞</div>
+            <div class="piece special black" id="rook-2">♜</div>
+
+            <div class="piece pawn white" id="pawn-white-1">♙</div>
+            <div class="piece pawn white" id="pawn-white-2">♙</div>
+            <div class="piece pawn white" id="pawn-white-3">♙</div>
+            <div class="piece pawn white" id="pawn-white-4">♙</div>
+            <div class="piece pawn white" id="pawn-white-5">♙</div>
+            <div class="piece pawn white" id="pawn-white-6">♙</div>
+            <div class="piece pawn white" id="pawn-white-7">♙</div>
+            <div class="piece pawn white" id="pawn-white-8">♙</div>
+            <div class="piece special white" id="rook-1">♖</div>
+            <div class="piece special white" id="knight-1">♘</div>
+            <div class="piece special white" id="bishop-1">♗</div>
+            <div class="piece special white" id="queen">♕</div>
+            <div class="piece special white" id="king">♔</div>
+            <div class="piece special white" id="bishop-2">♗</div>
+            <div class="piece special white" id="knight-2">♘</div>
+            <div class="piece special white" id="rook-2">♖</div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
