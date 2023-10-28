@@ -1,8 +1,47 @@
 const SQUARE_SIZE = 80;
 
+$(".container").css({
+    "display": "flex",
+    "justify-content": "center",
+    "align-items": "center",
+    "width": "100%",
+    "height": "750px"
+});
 
+
+$(".chessboard").css({
+    "display": "grid",
+    "grid-template-columns": `repeat(8, ${SQUARE_SIZE}px)`,
+    "grid-template-rows": `repeat(8, ${SQUARE_SIZE}px)`,
+    "border": "3px solid black",
+    "position": "relative",
+    "width": "fit-content"
+});
+
+// Thiết lập CSS cho .square
+$(".square").css({
+    "width": `${SQUARE_SIZE}px`,
+    "height": `${SQUARE_SIZE}px`,
+    "cursor": "pointer",
+    "user-select": "none"
+});
+
+// Thiết lập CSS cho .piece
+$(".piece").css({
+    "width": `${SQUARE_SIZE}px`,
+    "height": `${SQUARE_SIZE}px`,
+    "position": "absolute",
+    "cursor": "pointer",
+    "font-size": `${SQUARE_SIZE}px`,
+    "display": "flex",
+    "justify-content": "center",
+    "align-items": "center",
+    "user-select": "none"
+});
 
 $(document).ready(function () {
+    
+
     const chessboard = $("#chessboard");
 
     init_chess_game();

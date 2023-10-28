@@ -5,66 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chessboard</title>
-    <style>
-        :root {
-            --light-color: #eeeed2;
-            --dark-color: #769656;
-            --square-size: 80px;
-            --piece-size: 80px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 750px;
-        }
-
-        .chessboard {
-            display: grid;
-            grid-template-columns: repeat(8, var(--square-size));
-            grid-template-rows: repeat(8, var(--square-size));
-            border: 3px solid black;
-            position: relative;
-            width: fit-content;
-        }
-
-        .square {
-            width: var(--square-size);
-            height: var(--square-size);
-            cursor: pointer;
-            user-select: none;
-        }
-
-        .piece {
-            width: var(--square-size);
-            height: var(--square-size);
-            position: absolute;
-            cursor: pointer;
-            font-size: var(--piece-size);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            user-select: none;
-        }
-
-        .thumb {
-            position: absolute;
-            opacity: 35%;
-        }
-
-        #pawn-1 {
-            top: calc(var(--piece-size) * 6);
-            left: calc(var(--piece-size) * 0);
-        }
-    </style>
 </head>
 
 <body>
